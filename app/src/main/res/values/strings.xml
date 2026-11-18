@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">MinhaLoja</string>
+
+    <!-- Comum -->
+    <string name="back">Voltar</string>
+    <string name="sair">Sair</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_senha">Senha</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Entrar</string>
+    <string name="login_subtitulo">Entre para ver os produtos e guardar seus favoritos.</string>
+    <string name="entrar">Entrar</string>
+    <string name="criar_conta">Criar conta</string>
+
+    <!-- Produtos -->
+    <string name="produtos_titulo">Produtos</string>
+    <string name="produtos_vazio">Nenhum produto encontrado.</string>
+    <string name="produtos_erro">Não foi possível carregar os produtos. Verifique sua conexão.</string>
+    <string name="tentar_de_novo">Tentar de novo</string>
+    <string name="favorito_salvar">Salvar nos favoritos</string>
+    <string name="favorito_salvo">Favorito</string>
+    <string name="favorito_salvo_msg">Salvo nos favoritos</string>
+
+    <!-- Favoritos -->
+    <string name="meus_favoritos">Meus favoritos</string>
+    <string name="favoritos_vazio">Você ainda não tem favoritos. Toque em um produto para salvá-lo.</string>
+    <string name="remover_favorito">Remover dos favoritos</string>
+
+    <!-- Erros -->
+    <string name="erro_email_invalido">Informe um e-mail válido.</string>
+    <string name="erro_senha_vazia">Informe a senha.</string>
+    <string name="erro_senha_curta">A senha precisa ter pelo menos 6 caracteres.</string>
+    <string name="erro_email_em_uso">Este e-mail já está cadastrado.</string>
+    <string name="erro_credenciais">E-mail ou senha incorretos.</string>
+    <string name="erro_sem_rede">Sem conexão com a internet.</string>
+    <string name="erro_permissao">Acesso negado pelo Firestore. Confira se as regras de firestore.rules foram publicadas.</string>
+    <string name="erro_generico">Algo deu errado. Tente novamente.</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/HeaderBar">
+
+        <LinearLayout style="@style/HeaderTopRow">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVoltar"
+                style="@style/HeaderBack" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/HeaderKicker"
+            android:text="@string/app_name" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="@string/meus_favoritos" />
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        style="@style/LoadingBar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            style="@style/ListRecycler" />
+
+        <TextView
+            android:id="@+id/txtVazio"
+            style="@style/EmptyText"
+            android:text="@string/favoritos_vazio" />
+
+        <TextView
+            android:id="@+id/txtErro"
+            style="@style/EmptyText" />
+    </FrameLayout>
+</LinearLayout>

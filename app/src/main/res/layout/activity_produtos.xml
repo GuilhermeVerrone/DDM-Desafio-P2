@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/HeaderBar">
+
+        <LinearLayout style="@style/HeaderTopRow">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFavoritos"
+                style="@style/HeaderAction"
+                android:text="@string/meus_favoritos"
+                app:icon="@drawable/ic_favorite" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSair"
+                style="@style/HeaderAction"
+                android:text="@string/sair"
+                app:icon="@drawable/ic_logout" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/HeaderKicker"
+            android:text="@string/app_name" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:text="@string/produtos_titulo" />
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        style="@style/LoadingBar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            style="@style/ListRecycler" />
+
+        <TextView
+            android:id="@+id/txtVazio"
+            style="@style/EmptyText"
+            android:text="@string/produtos_vazio" />
+
+        <LinearLayout
+            android:id="@+id/grupoErro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/EmptyText"
+                android:visibility="visible"
+                android:text="@string/produtos_erro" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTentarDeNovo"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tentar_de_novo" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
